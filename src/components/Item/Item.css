@@ -1,0 +1,26 @@
+.cardProducto {
+    border-radius: 5px;
+    width: 18rem;
+    max-height: 30rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #16213E;
+    text-align: center;
+}
+.link button{
+    color: #16213E;
+    cursor: pointer;
+}
+.link button:hover{
+    border-color: #DF2E38;
+    border-radius: 3px;
+    background-color: #FFE3E1;
+}
+.imgProducto {
+    width: 150px;
+    object-fit: contain;
+}

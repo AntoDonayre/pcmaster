@@ -1,0 +1,14 @@
+.contenedorItem {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1rem 2rem 0 2rem;
+}
+.descripContenedor{
+    padding: 1rem;
+}
+.contenedorItem img{
+    width: 30rem;
+}
+img {
+    width: 50vw;
+}

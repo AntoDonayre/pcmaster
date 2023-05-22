@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './ItemCount.css'
 
 const ItemCount = () => {
     const [contador, setContador] = useState(1);
@@ -19,10 +20,10 @@ const ItemCount = () => {
     }
 
   return (
-    <div>
-        <button onClick={ decrementar }> - </button>
+    <div className='contadorContainer'>
+        <button className='btnContador' onClick={ decrementar }> - </button>
         <p> {contador} </p>
-        <button onClick={ incrementar }> + </button>
+        <button className='btnContador' onClick={ incrementar }> + </button>
     </div>
   )
 }

@@ -1,0 +1,16 @@
+.contadorContainer{
+    display: flex;
+    max-width: 5rem;
+    max-height: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.btnContador{
+    color: #16213E;
+    cursor: pointer;
+}
+.btnContador:hover{
+    border-color: #DF2E38;
+    border-radius: 3px;
+    background-color: #FFE3E1;
+}

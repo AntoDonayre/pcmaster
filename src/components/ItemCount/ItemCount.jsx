@@ -1,31 +1,33 @@
 import React from 'react'
 import { useState } from 'react'
 import './ItemCount.css'
+//recordar que se debe desestructurar las props, como se agrega una funcion js siempre debe tener ({}) este formato.
+const ItemCount = ({inicial, stock, funcionAgregar}) => {
 
-const ItemCount = () => {
-    const [contador, setContador] = useState(1);
-    
-    let maximoStock = 10; 
+    const [contador, setContador] = useState(inicial);
 
     const incrementar = () => {
-        if(contador < maximoStock) {
+        if (contador < stock) {
             setContador(contador + 1);
         }
     }
 
     const decrementar = () => {
-        if(contador > 1){
+        if (contador > inicial) {
             setContador(contador - 1);
         }
     }
 
-  return (
-    <div className='contadorContainer'>
-        <button className='btnContador' onClick={ decrementar }> - </button>
-        <p> {contador} </p>
-        <button className='btnContador' onClick={ incrementar }> + </button>
-    </div>
-  )
+    return (
+        <>
+            <div className='contadorContainer'>
+                <button className='btnContador' onClick={decrementar}> - </button>
+                <p> {contador} </p>
+                <button className='btnContador' onClick={incrementar}> + </button>
+            </div>
+            <button className='btnAgregar' onClick={()=>funcionAgregar(contador)}>Agregar al carrito</button>
+        </>
+    )
 }
 
 export default ItemCount

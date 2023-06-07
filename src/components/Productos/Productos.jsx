@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { collection, query, getDocs, where } from "firebase/firestore";
 import { db } from "../../Service/Config"
+import './Productos.css';
 
 const Productos = () => {
     const [Productos, setProductos] = useState([]);
@@ -18,7 +19,7 @@ const Productos = () => {
             <div className='productos-container'>
                 {
                     Productos.map((producto) => (
-                        <div className='"producto-card' key={producto.id}>
+                        <div className='producto-card' key={producto.id}>
                             <h2>{producto.nombre}</h2>
                             <p>Precio: s/ {producto.precio}</p>
                             <p>Stock:{producto.stock}</p>

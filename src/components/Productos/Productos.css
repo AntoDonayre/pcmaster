@@ -1,13 +1,13 @@
 .productos-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
 }
 .producto-card{
     width: 300px;
     border:  1px solid black;
     border-radius: 5px;
     padding: 1rem;
+    margin: 1rem;
 }
 .producto-card button{
     background-color: blue;

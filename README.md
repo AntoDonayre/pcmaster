@@ -1,6 +1,6 @@
 # Tienda PCmaster
 
-Este es un proyecto de estilo "ecommerce" usando React [React](https://es.react.dev/).
+Este es un proyecto de estilo "ecommerce" usando [React](https://es.react.dev/).
 
 ## Available Scripts
 

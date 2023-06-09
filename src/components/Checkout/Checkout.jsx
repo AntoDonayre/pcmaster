@@ -2,11 +2,11 @@ import React from 'react'
 import { useState, useContext } from 'react';
 import { CarritoContext } from '../../context/carritoContext';
 import { db } from "../../Service/Config";
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore';
 import './Checkout.css';
 
 const Checkout = () => {
-    const { carrito, vaciarCarrito } = useContext(CarritoContext);
+    const { carrito, vaciarCarrito, total } = useContext(CarritoContext);
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
     const [telefono, setTelefono] = useState("");
@@ -15,7 +15,8 @@ const Checkout = () => {
     const [error, setError] = useState("");
     const [ordenId, setOrdenId] = useState("");
 
-    const manejadorFormulario = () => {
+    const manejadorFormulario = (event) => {
+        event.preventDefault();
         if (!nombre || !apellido || !telefono || !email || !emailConfirmacion) {
             setError("Por favor no deje campos vacíos");
             return;
@@ -31,27 +32,52 @@ const Checkout = () => {
                 nombre: producto.item.nombre,
                 cantidad: producto.cantidad
             })),
-            total: carrito.reduce((total, producto) => total+producto.item.precio * producto.cantidad, 0),
+            total: carrito.reduce((total, producto) => total + producto.item.precio * producto.cantidad, 0),
             nombre,
             apellido,
             telefono,
-            email
+            email,
+            fecha: new Date()
         };
-
+        Promise.all(
+            orden.items.map(async(productoOrden) => {
+                const productoRef = doc(db, "productos", productoOrden.id);
+                const productoDoc = await getDoc(productoRef);
+                const stockActual = productoDoc.data().stock;
+                await updateDoc(productoRef, {
+                    stock: stockActual - productoOrden.cantidad,
+                })
+            })   
+        )
+            .then(() => {
+                addDoc(collection(db, "ordenes"), orden)
+                    .then((docRef) => {
+                        setOrdenId(docRef.id);
+                        vaciarCarrito();
+                    })
+                        .catch((error) => {
+                            console.error("Error al crear orden", error);
+                            setError("Se produjo un error al crear la orden");
+                        })
+            })
+                .catch(((error) => {
+                    console.error("Error para actualizar el stock", error);
+                    setError("Se produjo un error al actualizar el stock de productos");
+                }))     
+/*
         addDoc(collection(db, "ordenes"), orden)
             .then(docRef => {
                 setOrdenId(docRef.id);
                 vaciarCarrito();
             })
             .catch(error => {
-                console.log("Error al crear la orden")
+                console.log("Error al crear la orden", error)
                 setError("Se produjo un error al crear la orden, inténtelo de nuevo")
-            })
-
+            })*/
     }
     return (
         <div>
-            <h2>Checkout</h2>
+            <h2>Confirma tu compra</h2>
             <form onSubmit={manejadorFormulario}>
                 {carrito.map(producto => (
                     <div key={producto.item.id}>
@@ -62,6 +88,7 @@ const Checkout = () => {
                         <hr />
                     </div>
                 ))}
+                <p> Total: s/{total} </p>
                 <hr />
                 <div>
                     <label htmlFor="">Nombre</label>

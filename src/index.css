@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&family=Signika+Negative:wght@500&display=swap');
-/* font-family: 'Nunito', sans-serif;
-font-family: 'Signika Negative', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Signika+Negative:wght@400;500&display=swap');
+/* font-family: 'Roboto', sans-serif; -300/500
+font-family: 'Signika Negative', sans-serif;-400/500 */
 body {
   margin: 0rem;
-  font-family: 'Nunito', 'Courier New';
+  background-color: rgb(244, 245, 249);
+  font-family: 'Roboto', 'Courier New';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'Nunito', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Roboto', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }

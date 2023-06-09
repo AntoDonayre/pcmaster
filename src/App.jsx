@@ -7,8 +7,6 @@ import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import { CarritoProvider } from './context/carritoContext';
 
-//Catálogo de productos
-
 function App() {
   return (
     <>
@@ -19,7 +17,7 @@ function App() {
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/categoria/:idCategoria' element={<ItemListContainer />} />
             <Route path='/item/:idItem' element={<ItemDetailContainer />} />
-            {/* <Route path='*' element={<h2>Sitio en construcción</h2>} /> */}
+            <Route path='*' element={<h2>Sitio en construcción</h2>} />
             <Route path='/cart' element = {<Cart/>} />
             <Route path='/checkout' element={ <Checkout /> } />
           </Routes>

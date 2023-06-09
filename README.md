@@ -15,9 +15,9 @@ Realizar una tienda virtual con diferentes estaciones tanto de visualización, e
 
 ## Dependencias extras utilizadas:
 
-* [ReactApp](https://es.react.dev/learn/start-a-new-react-project).
-* [ReactDOM](https://es.legacy.reactjs.org/docs/react-dom.html).
-* [Iconify](https://iconify.design/docs/icon-components/react/).
+* [ReactApp](https://es.react.dev/learn/start-a-new-react-project): utilizado en la aplicación principal.
+* [ReactDOM](https://es.legacy.reactjs.org/docs/react-dom.html): permite enlaces a las categorias por productos y diferentes fases de la página.
+* [Iconify](https://iconify.design/docs/icon-components/react/): da acceso rápido a diversos iconos utlizados en el proyecot sin tener que descargar imágenes al azar, por ejemplo la imagen del carrito de compras.
 
 ## Licencia:
 

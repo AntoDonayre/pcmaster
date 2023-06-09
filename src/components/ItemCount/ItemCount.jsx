@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import './ItemCount.css'
-//recordar que se debe desestructurar las props, como se agrega una funcion js siempre debe tener ({}) este formato.
 const ItemCount = ({inicial, stock, funcionAgregar}) => {
 
     const [contador, setContador] = useState(inicial);

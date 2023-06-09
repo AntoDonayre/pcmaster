@@ -1,5 +1,3 @@
-//Card indivual por producto
-
 import './Item.css'
 import { Link } from 'react-router-dom'
 

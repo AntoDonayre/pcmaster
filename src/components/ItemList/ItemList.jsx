@@ -1,5 +1,3 @@
-//Producto por su categoría
-
 import Item from "../Item/Item"
 import './ItemList.css'
 

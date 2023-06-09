@@ -12,9 +12,6 @@ font-family: 'Signika Negative', sans-serif; */
 .brand:hover{
     color: red;
 }
-/* .brand strong:hover{
-    color: red;
-} */
 .brand strong{
     color: #16213E;
 }

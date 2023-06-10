@@ -1,26 +1,24 @@
 .cardProducto {
-    border-radius: 5px;
-    width: 18rem;
-    max-height: 30rem;
+    border-radius: 8px;
+    width: 22rem;
+    height: 25rem;
     padding: 1rem;
     margin: 1rem;
-    background-color: #EEEEEE;
+    background-color: #232835;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #16213E;
+    justify-content: center;
+    color: white;
     text-align: center;
+    font-size: 13px;
+    box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, .2);
+    transition: .2s;
 }
-.link button{
-    color: #16213E;
-    cursor: pointer;
-}
-.link button:hover{
-    border-color: #DF2E38;
-    border-radius: 3px;
-    background-color: #FFE3E1;
+.cardProducto:hover{
+    background-color: #393E46;
 }
 .imgProducto {
-    width: 150px;
+    width: 70%;
     object-fit: contain;
 }

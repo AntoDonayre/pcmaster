@@ -3,29 +3,48 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow:  0px 3px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.2);
 }
-.brand{
+
+.brand {
     font-family: 'barlow';
 }
-.link{
+
+.link {
     text-decoration: none;
-    color: #FFD369;
+    color: white;
 }
-.brand:hover{
-    color: #eeee;
+
+.brand {
+    font-size: 20px;
     transition: .2s;
 }
+
+.brand strong {
+    font-size: 40px;
+    background: linear-gradient(#e00597, #760fb6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.brand:hover {
+    background: linear-gradient(#e00597, #760fb6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 li {
     display: inline-block;
     margin: 1rem;
     cursor: pointer;
 }
-.navlink{
+
+.navlink {
     text-decoration: none;
-    color: #FFD369;
-}
-.navlink:hover{
-    color: #eeee;
+    color: white;
     transition: .2s;
+}
+
+.navlink:hover {
+    color: #393E46;
 }

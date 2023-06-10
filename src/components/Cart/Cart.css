@@ -1,3 +1,8 @@
+h2{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
 .carritoVacioCont{
     height: 70vh;
     display: flex;
@@ -23,7 +28,6 @@
     color: #393E46;
 }
 .carritoVisual{
-    height: 80vh;
     color: white;
     display: flex;
     justify-content: space-evenly;

@@ -40,14 +40,14 @@ const Checkout = () => {
             fecha: new Date()
         };
         Promise.all(
-            orden.items.map(async(productoOrden) => {
+            orden.items.map(async (productoOrden) => {
                 const productoRef = doc(db, "productos", productoOrden.id);
                 const productoDoc = await getDoc(productoRef);
                 const stockActual = productoDoc.data().stock;
                 await updateDoc(productoRef, {
                     stock: stockActual - productoOrden.cantidad,
                 })
-            })   
+            })
         )
             .then(() => {
                 addDoc(collection(db, "ordenes"), orden)
@@ -55,18 +55,18 @@ const Checkout = () => {
                         setOrdenId(docRef.id);
                         vaciarCarrito();
                     })
-                        .catch((error) => {
-                            console.error("Error al crear orden", error);
-                            setError("Se produjo un error al crear la orden");
-                        })
+                    .catch((error) => {
+                        console.error("Error al crear orden", error);
+                        setError("Se produjo un error al crear la orden");
+                    })
             })
-                .catch(((error) => {
-                    console.error("Error para actualizar el stock", error);
-                    setError("Se produjo un error al actualizar el stock de productos");
-                }))
+            .catch(((error) => {
+                console.error("Error para actualizar el stock", error);
+                setError("Se produjo un error al actualizar el stock de productos");
+            }))
     }
     return (
-        <div>
+        <div className='formConfirm'>
             <h2>Confirma tu compra</h2>
             <form onSubmit={manejadorFormulario}>
                 {carrito.map(producto => (
@@ -80,28 +80,30 @@ const Checkout = () => {
                 ))}
                 <p> Total: s/{total} </p>
                 <hr />
-                <div>
-                    <label htmlFor="">Nombre</label>
-                    <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                <div className='clientData'>
+                    <div>
+                        <label htmlFor="">Nombre</label>
+                        <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                    </div>
+                    <div>
+                        <label htmlFor="">Apellido</label>
+                        <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
+                    </div>
+                    <div>
+                        <label htmlFor="">Teléfono</label>
+                        <input type="number" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                    </div>
+                    <div>
+                        <label htmlFor="">Email</label>
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div>
+                        <label htmlFor="">Email confirmación</label>
+                        <input type="email" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
+                    </div>
+                    {error && <p style={{ color: "red" }}>{error}</p>}
+                    <button type="submit"> Finalizar compra </button>
                 </div>
-                <div>
-                    <label htmlFor="">Apellido</label>
-                    <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="">Teléfono</label>
-                    <input type="number" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="">Email</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="">Email confirmación</label>
-                    <input type="email" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
-                </div>
-                {error && <p style={{ color: "red" }}>{error}</p>}
-                <button type="submit"> Finalizar compra </button>
             </form>
             {ordenId && (<strong> ¡Gracias por tu compra!, tu número de orden es {ordenId} </strong>)}
         </div>

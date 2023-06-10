@@ -25,3 +25,18 @@ img{
     grid-area: contador;
     justify-self: end;
 }
+.btnTerminarCompra{
+    color: white;
+    font-family: 'poppins';
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(#e00597, #760fb6);
+    padding: .8rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.btnTerminarCompra:hover{
+    background-image: none;
+    background-color: greenyellow;
+    color: #393E46;
+}

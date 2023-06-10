@@ -1,4 +1,5 @@
 import { CarritoContext } from "../../context/carritoContext"
+import './Cart.css'
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import CartItem from "../CartItem/CartItem"
@@ -8,20 +9,23 @@ const Cart = () => {
 
     if (cantidadTotal === 0) {
         return (
-            <>
-                <h2> No hay productos en el carrito</h2>
-                <Link to='/'> Ver Productos </Link>
-            </>
+            <div className="carritoVacioCont">
+                <h2 className="NoProductos"> No hay productos en el carrito</h2>
+                <Link to='/'> <button className="btnVerProductos">Ver Productos</button> </Link>
+            </div>
         )
     }
     return (
-        <div>
-            {carrito.map(producto => <CartItem key={producto.id} {...producto} />)}
-            <h3>Total: ${total} </h3>
-            <h3>Cantidad total: {cantidadTotal} </h3>
-            <button onClick={() => vaciarCarrito()}> Vaciar carrito </button>
-            <Link to='/checkout'> Finalizar Compra </Link>
-
+        <div className="carritoVisual">
+            <div className="firstBodyConfirm">
+                {carrito.map(producto => <CartItem key={producto.id} {...producto} />)}
+            </div>
+            <div className="secondBodyConfirm">
+                <h4 className="total">Total: s/{total} </h4>
+                <h4 className="cantidadTotal">Número de productos: {cantidadTotal} </h4>
+                <button onClick={() => vaciarCarrito()} className="btnVaciaryFin"> Vaciar carrito </button>
+                <Link to='/checkout'> <button className="btnVaciaryFin">Finalizar Compra</button> </Link>
+            </div>
         </div>
     )
 }

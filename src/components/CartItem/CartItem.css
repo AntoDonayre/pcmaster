@@ -1,0 +1,18 @@
+.itemProdContainer{
+    font-size: 1.3rem;
+}
+.btnEliminarProd{
+    color: white;
+    font-family: 'poppins';
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(#e00597, #760fb6);
+    padding: .8rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.btnEliminarProd:hover{
+    background-image: none;
+    background-color: greenyellow;
+    color: #393E46;
+}

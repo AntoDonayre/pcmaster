@@ -25,21 +25,3 @@ img{
     grid-area: contador;
     justify-self: end;
 }
-.contadorContainer button{
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-}
-.contadorContainer button:hover{
-    background-color: #393E46;
-}
-.btnAgregar{
-    grid-area: btnCart;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.btnAgregar:hover{
-    background-color: #393E46;
-}

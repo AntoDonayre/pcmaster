@@ -1,3 +1,7 @@
-.imgCarrito {
-    width: 2.5rem;
+.imgCarrito{
+    font-size: 2.5rem;
+}
+.imgCarrito:hover{
+    color: #eeee;
+    transition: .2s;
 }

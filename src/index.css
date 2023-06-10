@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Signika+Negative:wght@400;500&display=swap');
-/* font-family: 'Roboto', sans-serif; -300/500
-font-family: 'Signika Negative', sans-serif;-400/500 */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&family=Poppins:wght@400;600&display=swap');
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Poppins', sans-serif; */
 body {
   margin: 0rem;
-  background-color: rgb(244, 245, 249);
-  font-family: 'Roboto', 'Courier New';
+  background-color: #222831;
+  font-family: 'poppins'; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

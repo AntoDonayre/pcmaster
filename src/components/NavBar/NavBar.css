@@ -1,23 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Signika+Negative:wght@400;500&display=swap');
-/* font-family: 'Roboto', sans-serif; -300/500
-font-family: 'Signika Negative', sans-serif;-400/500 */
 .header {
     padding: 0 1rem 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Signika Negative';
-    font-weight: 500;
     box-shadow:  0px 3px 2px 0px rgba(0, 0, 0, 0.2);
 }
-.brand:hover{
-    color: red;
-}
-.brand strong{
-    color: #16213E;
+.brand{
+    font-family: 'barlow';
 }
 .link{
     text-decoration: none;
+    color: #FFD369;
+}
+.brand:hover{
+    color: #eeee;
+    transition: .2s;
 }
 li {
     display: inline-block;
@@ -26,7 +23,9 @@ li {
 }
 .navlink{
     text-decoration: none;
+    color: #FFD369;
 }
 .navlink:hover{
-    color: red;
+    color: #eeee;
+    transition: .2s;
 }

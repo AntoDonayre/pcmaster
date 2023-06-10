@@ -40,3 +40,8 @@
     cursor: pointer;
     transition: .2s;
 }
+.btnAgregar:hover{
+    background-image: none;
+    background-color: greenyellow;
+    color: #393E46;
+}

@@ -11,10 +11,12 @@ const ItemListContainer = ({ greeting }) => {
   const { idCategoria } = useParams();
   const images = [
     'https://www.evetech.co.za/repository/ProductImages/asus-tuf-gaming-laptop-banner-1586px-615px-v1.jpg',
-    'https://www.gigabyte.com/FileUpload/global/News/1876/o202105181422055711.jpg',
-    'https://cdn.shopify.com/s/files/1/1780/7915/files/ASUS_Intel_Gaming_Pro_Desktop_PC_-_From_TPSTech_-_Main_Banner.jpg?v=1638683789',
-    'https://cdn.shopify.com/s/files/1/1780/7915/files/Razer_Viper_Razer_DeathAdder_V2_Mini_From_tpstech-main_banner.jpg?v=1654588178',
-    'https://avp.asus.com/wp-content/uploads/2021/03/Display_ProArt_banner.jpg',
+    'https://www.abboudtrading.com/content/files/images/Razer-VIPER-V2-PRO-Banner.jpg',
+    'https://storage-asset.msi.com/event/nb/2017/GF-GV-Series-page/images/banner.jpg',
+    'https://www.asus.com/WebsitesBanner/IT/banners/p24rsk1fqxnayxwt/p24rsk1fqxnayxwt-0_0_desktop_1X.jpg',
+    'https://storage-asset.msi.com/latam/picture/banner/banner_16783521984447e5ca580af0979a0b58212253a23d.jpeg',
+    'https://static.gigabyte.com/StaticFile/Image/Global/318275f385f70b115f765392ef405dc5/PromotionBanner/276/webp/1920',
+    'https://static.gigabyte.com/StaticFile/Image/Global/3c9e6ce6b1ca39023805be6aec30a8ea/PromotionBanner/280/webp/1920',
   ];
   useEffect(() => {
     const misProductos = idCategoria ? query(collection(db, "productos"), where("idCat", "==", idCategoria)) : collection(db, "productos");

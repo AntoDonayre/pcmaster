@@ -5,3 +5,6 @@
     color: #eeee;
     transition: .2s;
 }
+icon:hover{
+    background-color: #393E46;
+}

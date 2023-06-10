@@ -4,6 +4,7 @@
     "img descripcionProd descripcionProd"
     "img contador btnCart";
     margin: 1rem 2rem 0 2rem;
+    color: white;
 }
 .descripContenedor{
     padding: 1rem;
@@ -24,6 +25,21 @@ img{
     grid-area: contador;
     justify-self: end;
 }
-button{
+.contadorContainer button{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+.contadorContainer button:hover{
+    background-color: #393E46;
+}
+.btnAgregar{
     grid-area: btnCart;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btnAgregar:hover{
+    background-color: #393E46;
 }

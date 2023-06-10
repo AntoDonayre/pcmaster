@@ -11,17 +11,7 @@
     cursor: pointer;
     margin: 0 10px 0 10px;
 }
-.btnContador:hover{
-    border-color: #DF2E38;
-    border-radius: 3px;
-    background-color: #FFE3E1;
-}
 .btnAgregar{
     max-width: 30%;
     max-height: 2rem;
-}
-.btnAgregar:hover{
-    border-color: #DF2E38;
-    border-radius: 3px;
-    background-color: #FFE3E1;
 }

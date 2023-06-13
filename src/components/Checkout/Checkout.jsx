@@ -74,11 +74,11 @@ const Checkout = () => {
                         <p>
                             {producto.item.nombre} x {producto.cantidad}
                         </p>
-                        <p>Precio s/: {producto.item.precio}</p>
+                        <p>Precio: s/ {producto.item.precio}</p>
                         <hr />
                     </div>
                 ))}
-                <p> Total: s/{total} </p>
+                <p> Total: <strong>s/{total}</strong></p>
                 <hr />
                 <div className='clientData'>
                     <div>
@@ -105,7 +105,8 @@ const Checkout = () => {
                     <button type="submit"> Finalizar compra </button>
                 </div>
             </form>
-            {ordenId && (<strong> ¡Gracias por tu compra!, tu número de orden es {ordenId} </strong>)}
+            <br />
+            {ordenId && (<span className='ordenCompra'> ¡Gracias por tu compra!, <br/> tu código de orden es <strong>{ordenId}</strong></span>)}
         </div>
     )
 }

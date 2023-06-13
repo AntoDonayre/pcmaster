@@ -1,5 +1,4 @@
 .formConfirm{
-    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,11 +9,21 @@
 .formConfirm div{
     margin: 20px 0 0 0;
 }
+.formConfirm form{
+    width: 40%;
+    min-width: 180px;
+}
+.clientData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .clientData div{
     display: flex;
     flex-direction: column;
 }
 .clientData div input{
+    min-width: 176px;
     border: none;
     border-radius: 5px;
     padding: .4rem;
@@ -37,4 +46,10 @@
     background-image: none;
     background-color: greenyellow;
     color: #393E46;
+}
+.ordenCompra{
+    text-align: center;
+}
+strong{
+    color: greenyellow;
 }

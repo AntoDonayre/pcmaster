@@ -8,7 +8,7 @@ const ImageReel = ({ images }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-    }, 3000);
+    }, 3500);
 
     return () => {
       clearInterval(interval);

@@ -105,12 +105,7 @@ const Checkout = () => {
                     <button type="submit"> Finalizar compra </button>
                 </div>
             </form>
-<<<<<<< HEAD
             {ordenId && (<p className='compraRealizada'> ¡Gracias por tu compra!, tu número de orden es <strong> {ordenId} </strong> </p>)}
-=======
-            <br />
-            {ordenId && (<span className='ordenCompra'> ¡Gracias por tu compra!, <br/> tu código de orden es <strong>{ordenId}</strong></span>)}
->>>>>>> styles
         </div>
     )
 }

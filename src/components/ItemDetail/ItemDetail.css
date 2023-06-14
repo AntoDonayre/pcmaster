@@ -40,3 +40,12 @@ img{
     background-color: greenyellow;
     color: #393E46;
 }
+@media (max-width: 850px){
+    .contenedorItem{
+        justify-items: center;
+        grid-template-areas: 
+        "img img"
+        "descripcionProd descripcionProd"
+        "contador btnCart";
+    }
+}

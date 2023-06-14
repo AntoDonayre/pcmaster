@@ -1,3 +1,9 @@
+.ul-toggle{
+    display: none;
+}
+.btnToggle{
+    display: none;
+}
 .header {
     padding: 0 1rem 0 1rem;
     display: flex;
@@ -13,6 +19,11 @@
 .link {
     text-decoration: none;
     color: white;
+}
+
+.ul{
+    display: flex;
+    flex-direction: row;
 }
 
 .brand {
@@ -47,4 +58,40 @@ li {
 
 .navlink:hover {
     color: greenyellow;
+}
+
+@media (max-width: 850px){
+    .ul{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+        background-color: transparent;
+        border: solid 1px white;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .menu-button span{
+        display: flex;
+        flex-direction: column;
+        width: 32px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: white;
+        margin: 5px;
+    }
+    .header{
+        position: relative;
+    }
+    .nav{
+        position: absolute;
+        right: 0;
+        top: 0;
+        /* background-color: #1a1c2a; */
+        padding: 20px 5px 20px 5px;
+    }
+    .ul-toggle{
+        /* display: flex; */
+        flex-direction: column;
+    }
 }

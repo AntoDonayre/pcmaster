@@ -47,13 +47,12 @@
     background-color: greenyellow;
     color: #393E46;
 }
-<<<<<<< HEAD
 .compraRealizada strong{
-=======
-.ordenCompra{
-    text-align: center;
-}
-strong{
->>>>>>> styles
     color: greenyellow;
+}
+
+@media (max-width: 850px){
+    .formConfirm form{
+        min-width: 80%;
+    }
 }

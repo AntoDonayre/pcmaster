@@ -1,3 +1,5 @@
+import React from "react"
+import MobileMenu from "../Toggle/Toggle"
 import CartWidget from "../CartWidget/CartWidget"
 import './NavBar.css'
 import { NavLink, Link } from "react-router-dom"
@@ -19,11 +21,12 @@ const NavBar = () => {
           <li>
             <NavLink to={`/categoria/componentes`} className="navlink"> Componentes para pc </NavLink>
           </li>
+          <CartWidget />
         </ul>
+        <MobileMenu />
       </nav>
-      <CartWidget />
     </header>
   )
 }
 
-export default NavBar
+export default NavBar;

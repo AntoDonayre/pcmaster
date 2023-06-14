@@ -51,3 +51,12 @@ h2{
     background-color: greenyellow;
     color: #393E46;
 }
+@media (max-width: 850px){
+    .carritoVisual{
+        flex-direction: column;
+        text-align: center;
+    }
+    .carritoVisual div{
+        margin: 15px 0 15px 0;
+    }
+}

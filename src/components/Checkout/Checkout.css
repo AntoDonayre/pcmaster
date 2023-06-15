@@ -55,4 +55,8 @@
     .formConfirm form{
         min-width: 80%;
     }
+    .compraRealizada{
+        text-align: center;
+        padding: 0 2rem 0 2rem;
+    }
 }

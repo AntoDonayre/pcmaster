@@ -1,6 +1,6 @@
 .mobile-menu{
     background-color: #1a1c2a;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: end;
 }
@@ -8,4 +8,10 @@
     display: flex;
     flex-direction: column;
     padding: 10px 20px 30px 20px;
+}
+
+@media (max-width: 850px){
+    .mobile-menu{
+        display: flex;
+    }
 }

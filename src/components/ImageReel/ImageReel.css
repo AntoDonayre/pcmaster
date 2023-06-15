@@ -6,3 +6,12 @@
     height: 35rem;
     object-fit: cover;
 }
+
+@media (max-width: 850px){
+    .reel{
+        height: 10rem;
+    }
+    .reel div img{
+        height: 100%;
+    }
+}

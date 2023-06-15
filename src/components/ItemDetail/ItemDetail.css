@@ -49,3 +49,13 @@ img{
         "contador btnCart";
     }
 }
+
+@media (max-width: 515px){
+    .contenedorItem{
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedorItem img{
+        width: 100%;
+    }
+}

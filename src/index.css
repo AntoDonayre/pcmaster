@@ -2,7 +2,7 @@
 /* font-family: 'Barlow', sans-serif;
 font-family: 'Poppins', sans-serif; */
 body {
-  margin: 0rem;
+  margin: 0 0 3rem 0;
   background-color: #1a1c2a;
   font-family: 'poppins';
   -webkit-font-smoothing: antialiased;

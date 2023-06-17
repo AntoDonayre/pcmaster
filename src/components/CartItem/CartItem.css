@@ -17,3 +17,19 @@
     background-color: greenyellow;
     color: #393E46;
 }
+.btnqnt{
+    margin: 0 0 0 .8rem;
+    color: white;
+    font-family: 'poppins';
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(#e00597, #760fb6);
+    padding: .1rem .4rem .1rem .4rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.btnqnt:hover{
+    background-image: none;
+    background-color: greenyellow;
+    color: #393E46;
+}

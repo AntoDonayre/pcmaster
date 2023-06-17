@@ -1,10 +1,9 @@
 import { useContext, useState } from "react"
 import './CartItem.css'
-import { Link } from "react-router-dom";
 import { CarritoContext } from "../../context/carritoContext";
 
 const CartItem = ({ item, cantidad }) => {
-  const { eliminarProducto, vaciarCarrito } = useContext(CarritoContext);
+  const { eliminarProducto } = useContext(CarritoContext);
   const [cantidadProducto, setCantidadProducto] = useState(cantidad);
   const [precio, setPrecio] = useState(item.precio * cantidadProducto);
 

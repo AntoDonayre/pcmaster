@@ -37,6 +37,7 @@ h2{
     font-size: 1.3rem;
 }
 .btnVaciaryFin{
+    margin: 0 .5rem 0 .5rem;
     color: white;
     font-family: 'poppins';
     border: none;

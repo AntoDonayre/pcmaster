@@ -4,7 +4,7 @@ export const CarritoContext = createContext({
   carrito: [],
   total: 0,
   cantidadTotal: 0,
-  actualizarCantidad: () => { }
+  actualizarCantidad: () => {},
 });
 
 export const CarritoProvider = ({ children }) => {

@@ -43,10 +43,14 @@ img{
 @media (max-width: 850px){
     .contenedorItem{
         justify-items: center;
+        align-items: center;
         grid-template-areas: 
         "img img"
         "descripcionProd descripcionProd"
         "contador btnCart";
+    }
+    .cartCountContainer{
+        margin: .5rem;
     }
 }
 
@@ -54,6 +58,7 @@ img{
     .contenedorItem{
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .contenedorItem img{
         width: 100%;

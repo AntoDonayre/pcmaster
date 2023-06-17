@@ -16,3 +16,8 @@
         object-fit: contain;
     }
 }
+@media (max-width: 515px){
+    .reel{
+        margin-bottom: 5rem;
+    }
+}
